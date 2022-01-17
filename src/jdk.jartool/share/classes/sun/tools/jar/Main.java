@@ -461,13 +461,13 @@ public class Main {
         }
         Path path = tmpfile.toPath();
         try {
-            if (ok) {
+            //if (ok) {
                 if (fname != null) {
                     Files.move(path, Paths.get(fname), StandardCopyOption.REPLACE_EXISTING);
                 } else {
                     Files.copy(path, new FileOutputStream(FileDescriptor.out));
                 }
-            }
+            //}
         } finally {
             Files.deleteIfExists(path);
         }
